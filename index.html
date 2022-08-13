@@ -280,18 +280,16 @@
             </div> 
             <div class="send">
                 <strong class="header-footer">подпишитесь на рассылку</strong>
-                <div class="emal-input">
-                    <form class="footer-form">                        
-                        <label>
-                            <input type="email" name="sendi" placeholder="E-mail">
-                        </label>
-                        <button type="submit" class="send-button">
+                <form class="send-form">
+                    <label>
+                        <input type="email" name="email" class="send-email" placeholder="E-mail" required>
+                    </label>
+                    <button type="submit" class="send-button">
                             Подписаться
-                            <svg width="24" height="24" class="icon-send">
-                            <use href="./images/sprite.svg#icon-send"/></svg>
-                        </button>
-                    </form>
-                </div>
+                            <svg width="24" height="24">
+                                <use href="./images/sprite.svg#icon-send"/></svg>
+                    </button>
+                </form>
             </div>
         </div>
     </footer> 
@@ -305,7 +303,7 @@
             <form class="modal-form">
                 <div class="form-div">
                     <label for="name" class="form-label">Имя</label>
-                    <input class="form-input" type="name" name="name" id="name" placeholder=" " required>
+                    <input class="form-input" type="text" name="name" id="name" placeholder=" " required>
                     <svg width="18" height="18" class="modal-icon">
                         <use href="./images/sprite.svg#icon-person"/>
                     </svg>
@@ -329,14 +327,13 @@
                     <textarea name="comment" id="comment" placeholder="Введите текст" class="comment-input"></textarea>
                 </div>
                 <div class="check-div">
-                    <label class="check">
-                        <input type="checkbox" name="check" class="checkbox" required value="agree">
-                        <span class="check-icon"></span>
-                        Соглашаюсь с рассылкой и принимаю
-                        <a href="#" class="agreement">Условия договора</a>
+                    <label class="check-label">
+                        <input type="checkbox" class="checkbox" name="agree" value="agree" required>
+                        <span class="check-icon"></span>Соглашаюсь с рассылкой и принимаю&nbsp;
+                        <a href="#" class="link check-link">Условия договора</a>
                     </label>
                 </div>
-                <button type="submit" class="send-button">
+                <button type="submit" class="modal-button">
                     Отправить
                 </button>
             </form>
