@@ -438,9 +438,6 @@ footer {
     align-items: baseline;
 }
 
-.links-footer {
-    margin-right: 70px;
-}
 
 .logo-footer {
     color: var(--white-color);
@@ -481,6 +478,7 @@ footer {
 }
 
 .sn-footer {
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
 }
@@ -514,11 +512,10 @@ footer {
 
 .send {
     margin-left: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .send-form {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -725,7 +722,9 @@ footer {
     right: 8px;
     width: 30px;
     height: 30px;
-    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--border-btn-color);
     border-radius: 50%;
     background: var(--white-color);
@@ -755,7 +754,6 @@ footer {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 4px;
     margin-bottom: 10px;
 }
 
@@ -783,6 +781,7 @@ footer {
 }
 
 .form-label {
+    margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
@@ -794,13 +793,13 @@ footer {
 .modal-icon {
     position: absolute;
     left: 12px;
-    bottom: 11px;
+    top: 50%;
     fill: var(--main-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-div:hover .modal-icon,
-.form-div:focus .modal-icon {
+.form-input:hover + .modal-icon,
+.form-input:focus + .modal-icon {
     fill: var(--accent-color);
 }
 
@@ -826,8 +825,11 @@ footer {
     color: var(--placeholder-color);
 }
 
+.modal-form .form-div:nth-child(4) {
+    margin-bottom: 20px;
+}
+
 .check-div {
-    margin-top: 20px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -867,9 +869,17 @@ footer {
     transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .check-icon,
+.checkbox:focus + .check-icon,
 .checkbox:hover + .check-icon {
+    background-image: url(./images/accent-nochek.svg);
+}
+
+.checkbox:checked + .check-icon {
     background-image: url(./images/check.svg);
+}
+
+.checkbox:checked:hover +.check-icon {
+    background-image: url(./images/accent-nochek.svg);
 }
 
 .check-link {
